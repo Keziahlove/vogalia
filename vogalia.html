@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nom Vogalia - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .lottery-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nom Vogalia</h1>
+    </div>
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+            <!-- Add your bio content here -->
+        </p>
+
+        <h2>Portfolio</h2>
+        <p>
+            <!-- Add your portfolio content here -->
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+            <!-- Add your contact information here -->
+        </p>
+
+        <h2>Lottery</h2>
+        <p>Click the button below to participate in the lottery:</p>
+        <button class="lottery-button" id="lotteryButton">Participate</button>
+        <p id="lotteryResult"></p>
+    </div>
+    
+    <script>
+        document.getElementById("lotteryButton").addEventListener("click", function() {
+            var randomNumber = Math.floor(Math.random() * 100) + 1;
+            var lotteryResult = "Congratulations! You've won number " + randomNumber + "!";
+            document.getElementById("lotteryResult").innerText = lotteryResult;
+        });
+    </script>
+</body>
+</html>
